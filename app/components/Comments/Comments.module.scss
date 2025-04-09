@@ -1,0 +1,69 @@
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+  }
+  .wrapper > h2 {
+    color: #000;
+    text-align: center;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80px; 
+    text-transform: uppercase;
+}
+  .commentsWrapper {
+    position: relative;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .comments {
+    display: flex;
+    align-items: center;
+    animation: slide 200s linear infinite;
+    will-change: transform;
+  }
+  
+  .commentsWrapper:hover .comments {
+    animation-play-state: paused;
+  }
+  
+  .wrapper::before,
+  .wrapper::after {
+    position: absolute;
+    top: 0;
+    width: 350px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .wrapper::before {
+    left: 0;
+    background: linear-gradient(90deg, white 0%, white 10%, rgba(255, 255, 255, 0) 100%);
+  }
+  
+  .wrapper::after {
+    right: 0;
+    background: linear-gradient(270deg, white 0%, white 10%, rgba(255, 255, 255, 0) 100%);
+  }
+  

@@ -1,0 +1,42 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.headerTexts {
+    position: relative;
+    max-width: 565px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.headerTexts h2 {
+    color: #000;
+    text-align: center;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+.headerTexts p {
+    color:  #464C53;
+    text-align: center;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 16;
+    font-weight: 400;
+}
+.plane {
+    position: absolute;
+    left: calc(100% + 20px); 
+    transform: rotate(-10deg);
+}

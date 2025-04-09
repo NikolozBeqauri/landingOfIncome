@@ -1,0 +1,39 @@
+.wrapper {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.titles {
+    max-width: 685px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.titles h3 {
+    color: #000;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 68px; 
+    text-transform: uppercase;
+}
+.titles p {
+    color:#464C53;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+.image {
+    border-radius: 48px;
+    background: rgba(13, 146, 242, 0.10);
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}

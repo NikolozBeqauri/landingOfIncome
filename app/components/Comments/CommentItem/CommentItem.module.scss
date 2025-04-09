@@ -1,0 +1,60 @@
+.itemWrapper {
+    display: flex;
+    align-items: center;
+    width: 512px;
+    gap: 36px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 20px 14px 40px 0px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin-left: 88px;
+}
+
+.textWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    height: 160px;
+}
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.texts h3 {
+    color: #9E9E9E;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 10px;
+    text-align: center;
+}
+
+.texts p {
+    color: #000;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.personInfo h3 {
+    color: #9E9E9E;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+}
+
+.personInfo p {
+    color: #9E9E9E;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 8px;
+}

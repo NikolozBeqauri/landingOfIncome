@@ -1,0 +1,32 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    width: 100%;
+    padding: 22px 0px;
+    gap: 16px;
+}
+
+.navWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50,
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40;
+}
+
+.navLink {
+    color: #9194A1;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+}

@@ -1,0 +1,19 @@
+.wrapper {
+    display: inline-flex;
+    font-family: var(--font-noto-sans-georgian);
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 16px;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.blueButton {
+    background: #0D92F2;
+    color: #FFF; 
+}
+
+.grayButton {
+    background: #F6F7F9;
+    color: #464C53; 
+}

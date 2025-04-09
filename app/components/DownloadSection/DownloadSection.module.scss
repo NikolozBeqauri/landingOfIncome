@@ -1,0 +1,64 @@
+.background {
+    border-radius: 48px;
+    background: #0D92F2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 200px 0px;
+    background-image: url('/lines.png');
+    background-position: center;     
+}
+
+.wrapper {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    padding-top: 142px;
+}
+.wrapper > h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.contentItem {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contentItem h3 {
+    color: #EDEFF3;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+.contentItem p {
+    color: #FFF;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; 
+    letter-spacing: 0.2px;
+}
+.downloadIcons {
+    display: flex;
+    gap: 24px;
+    margin-top: 30px;
+    align-items: center;
+}

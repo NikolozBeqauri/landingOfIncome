@@ -1,0 +1,85 @@
+.wrapper {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    margin-bottom: 200px;
+}
+
+.wrapper h2 {
+    color: #000;
+    text-align: center;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+.contentWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.06);
+    padding: 10px 0px 10px 10px 
+}
+
+.leftContent {
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+    border-radius: 12px;
+    background: #0D92F2;
+    max-width: 480px;
+    width: 100%;
+    min-height: 644px;
+    padding: 40px;
+}
+
+.leftContentTitle {
+    color: #FFF;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contactsItem {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.contactsText {
+    color: #FFF;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.contactSocialMedia {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 100px;
+}
+
+.instagramLink {
+    display: flex;
+    border-radius: 100px;
+    background-color: #FFF;
+    padding: 6px;
+}

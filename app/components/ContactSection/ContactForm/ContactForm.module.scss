@@ -1,0 +1,80 @@
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 48px 77px 18px 88px;
+    width: 100%;
+    min-height: 644px;
+}
+
+.row {
+    display: flex;
+    gap: 75px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.textareaGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputGroup label,
+.textareaGroup label {
+    color: #8D8D8D;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.textareaGroup label {
+    margin-bottom: 8px;
+}
+
+.inputGroup input {
+    border-radius: 12px;
+    border: 1px solid #EEE;
+    background: #F9F9F9;
+    padding: 20px 14px;
+    width: 100%;
+}
+
+.textareaGroup {
+    margin-top: 32px;
+    flex: 1;
+}
+
+.textareaGroup textarea {
+    border-radius: 12px;
+    border: 1px solid #EEE;
+    background: #F9F9F9;
+    padding: 16px;
+    color: #BFBFBF;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    resize: none;
+    flex: 1;
+}
+
+.submit {
+    align-self: flex-end;
+    border-radius: 12px;
+    background: #0D92F2;
+    color: #FFF;
+    font-family: var(--font-noto-sans-georgian);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 16px 64px;
+    border: none;
+}
