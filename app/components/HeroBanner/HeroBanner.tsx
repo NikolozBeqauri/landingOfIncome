@@ -13,8 +13,12 @@ const HeroBanner = () => {
                         დაკავშირებული ყველა პრობლემა.
                     </p>
                     <div className={styles.buttons}>
-                        <ReusableButton title={'შემოგვიერთდი'} paddingHorizontal={88} paddingVertical={10} />
-                        <ReusableButton title={'გაიგე მეტი'} buttonColor='grayButton' paddingHorizontal={70} paddingVertical={10} />
+                        <div className={styles.joinUs}>
+                            <ReusableButton title={'შემოგვიერთდი'} />
+                        </div>
+                        <div className={styles.more}>
+                            <ReusableButton title={'გაიგე მეტი'} buttonColor='grayButton' />
+                        </div>
                     </div>
                 </div>
                 <Image
@@ -23,6 +27,13 @@ const HeroBanner = () => {
                     width={630}
                     height={650}
                     className={styles.heroImage}
+                />
+                <Image
+                    src="/smallHeroImage.png"
+                    alt="hero banner"
+                    width={456}
+                    height={478}
+                    className={styles.smallHeroImage}
                 />
             </div>
         </div>

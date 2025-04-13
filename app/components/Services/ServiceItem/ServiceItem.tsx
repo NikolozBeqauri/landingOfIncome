@@ -12,8 +12,7 @@ interface Props {
 const ServiceItem = (props: Props) => {
     return (
         <div
-            className={styles.wrapper}
-            style={props.rowReverse ? { flexDirection: 'row-reverse' } : {}}
+            className={`${styles.wrapper} ${props.rowReverse ? styles.rowReverse : ''}`}
         >
             <Image
                 src={`/${props.imageName}.png`}
@@ -28,8 +27,12 @@ const ServiceItem = (props: Props) => {
                     {props.paragraph}
                 </p>
                 <div className={styles.buttons}>
-                    <ReusableButton title={'შემოგვიერთდი'} paddingHorizontal={50} paddingVertical={8} />
-                    <ReusableButton title={'გაიგე მეტი'} buttonColor='grayButton' paddingHorizontal={68} paddingVertical={8} />
+                    <div className={styles.joinUs}>
+                        <ReusableButton title={'შემოგვიერთდი'} />
+                    </div>
+                    <div className={styles.more}>
+                        <ReusableButton title={'გაიგე მეტი'} buttonColor='grayButton' />
+                    </div>
                 </div>
             </div>
         </div>

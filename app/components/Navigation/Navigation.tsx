@@ -4,19 +4,23 @@ import ReusableButton from '../ReusableButton/ReusableButton';
 
 const Navigation = () => {
   return (
-    <nav className={styles.wrapper}>
+    <div className={styles.background}>
+      <nav className={styles.wrapper}>
       <span>LOGO</span>
       <div className={styles.navWrapper}>
         <ul className={styles.navList}>
-          <li><Link href="#services" className={styles.navLink}>ჩვენი სერვისები</Link></li>
-          <li><Link href="#offer" className={styles.navLink}>რას გთავაზობთ? </Link></li>
-          <li><Link href="#comments" className={styles.navLink}>ჩვენი მომხმარებლები </Link></li>
-          <li><Link href="#questions" className={styles.navLink}>შეკითხვები</Link></li>
-          <li><Link href="#contacts" className={styles.navLink}>კონტაქტი</Link></li>
+          <li><a href="#services" className={styles.navLink}>ჩვენი სერვისები</a></li>
+          <li><a href="#offer" className={styles.navLink}>რას გთავაზობთ? </a></li>
+          <li><a href="#comments" className={styles.navLink}>ჩვენი მომხმარებლები </a></li>
+          <li><a href="#questions" className={styles.navLink}>შეკითხვები</a></li>
+          <li><a href="#contacts" className={styles.navLink}>კონტაქტი</a></li>
         </ul>
-        <ReusableButton title={'გადმოწერა'} paddingHorizontal={32}  borderRadius={8}/>
+        <div className={styles.navButton}>
+          <ReusableButton title={'გადმოწერა'}  borderRadius={8}/>
+        </div>
       </div>
     </nav>
+    </div>
   );
 };
 

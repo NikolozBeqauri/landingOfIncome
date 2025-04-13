@@ -2,25 +2,47 @@
     display: flex;
     flex-direction: column;
     gap: 120px;
-    max-width: 1440px;
+    max-width: 1456px;
     width: 100%;
     align-items: center;
     margin-bottom: 200px;
+    padding: 0px 16px;
+    scroll-margin-top: 100px;
 }
 
-.wrapper > h2 {
+.wrapper>h2 {
     color: #000;
     text-align: center;
     font-family: var(--font-noto-sans-georgian);
     font-size: 56px;
     font-style: normal;
     font-weight: 800;
-    line-height: 80px; 
+    line-height: 80px;
     text-transform: uppercase;
 }
+
 .questions {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 40px
+}
+
+@media (max-width: 1024px) {
+    .wrapper h2 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .wrapper {
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
 }

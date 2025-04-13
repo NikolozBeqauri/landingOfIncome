@@ -1,6 +1,7 @@
 import styles from './FooterComponent.module.scss';
 import Image from 'next/image';
 import SocialLinks from './SocialLinks/SocialLinks';
+import Link from 'next/link';
 
 const FooterComponent = () => {
     return (
@@ -21,21 +22,11 @@ const FooterComponent = () => {
                     <nav className={styles.innerNavigation}>
                         <h4 className={styles.footerTitle}>ნავიგაცია</h4>
                         <ul>
-                            <li>
-                                <a className={styles.footerSecondaryText} href="#">ჩვენი სერვისები</a>
-                            </li>
-                            <li>
-                                <a className={styles.footerSecondaryText} href="#">რას გთავაზობთ?</a>
-                            </li>
-                            <li>
-                                <a className={styles.footerSecondaryText} href="#">მომხმარებლის შეფასება</a>
-                            </li>
-                            <li>
-                                <a className={styles.footerSecondaryText} href="#">შეკითხვები</a>
-                            </li>
-                            <li>
-                                <a className={styles.footerSecondaryText} href="#">კონტაქტი</a>
-                            </li>
+                            <li><Link href="#services" className={styles.footerSecondaryText}>ჩვენი სერვისები</Link></li>
+                            <li><Link href="#offer" className={styles.footerSecondaryText}>რას გთავაზობთ?</Link></li>
+                            <li><Link href="#comments" className={styles.footerSecondaryText}>ჩვენი მომხმარებლები </Link></li>
+                            <li><Link href="#questions" className={styles.footerSecondaryText}>შეკითხვები</Link></li>
+                            <li><Link href="#contacts" className={styles.footerSecondaryText}>კონტაქტი</Link></li>
                         </ul>
                     </nav>
 
@@ -43,16 +34,16 @@ const FooterComponent = () => {
                         <h4 className={styles.footerTitle}>მხარდაჭერა</h4>
                         <ul>
                             <li>
-                                <a className={styles.footerSecondaryText} href="#">Privacy Policy</a>
+                                <Link className={styles.footerSecondaryText} href="#">Privacy Policy</Link>
                             </li>
                             <li>
-                                <a className={styles.footerSecondaryText} href="#">Help center</a>
+                                <Link className={styles.footerSecondaryText} href="#">Help center</Link>
                             </li>
                             <li>
-                                <a className={styles.footerSecondaryText} href="#">Report a bug</a>
+                                <Link className={styles.footerSecondaryText} href="#">Report a bug</Link>
                             </li>
                             <li>
-                                <a className={styles.footerSecondaryText} href="#">Chat support</a>
+                                <Link className={styles.footerSecondaryText} href="#">Chat support</Link>
                             </li>
                         </ul>
                     </nav>

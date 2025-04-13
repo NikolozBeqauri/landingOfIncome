@@ -54,8 +54,10 @@
     gap: 16px;
 }
 
-.bankCardItem img {
+.icon {
     margin-left: 62px;
+    width: 62px;
+    height: 62px;
 }
 
 .bankCardItem p {
@@ -66,5 +68,57 @@
     font-weight: 600;
     line-height: 24px;
     white-space: nowrap;
+}
 
+@media (max-width: 1200px) {
+
+    .wrapper::before,
+    .wrapper::after {
+        width: 250px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        margin-top: 40px;
+    }
+    .wrapper::before,
+    .wrapper::after {
+        width: 200px;
+    }
+
+    .wrapper::before {
+        background: linear-gradient(90deg, white 0%, white 40%, rgba(255, 255, 255, 0.00) 100%);
+    }
+
+    .wrapper::after {
+        background: linear-gradient(270deg, white 0%, white 30%, rgba(255, 255, 255, 0) 100%);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .wrapper::before,
+    .wrapper::after {
+        width: 100px;
+    }
+
+    .wrapper::before {
+        background: linear-gradient(90deg, white 0%, white 1%, rgba(255, 255, 255, 0.00) 100%);
+    }
+
+    .wrapper::after {
+        background: linear-gradient(270deg, white 0%, white 1%, rgba(255, 255, 255, 0) 100%);
+    }
+}
+
+
+@media (max-width: 464px) {
+    .bankCardItem img {
+        width: 32px;
+        height: 32px;
+    }
+    .bankCardItem p {
+        font-size: 14px;
+    }
 }

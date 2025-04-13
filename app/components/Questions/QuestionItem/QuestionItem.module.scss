@@ -62,3 +62,36 @@
     max-height: 500px; 
     opacity: 1;
 }
+
+@media (max-width: 1200px) {
+    .arrow {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .mainText {
+        font-size: 20px;
+    }
+    .secondaryText {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .questionItem {
+        padding: 24px 16px;
+    }
+    .mainText {
+        font-size: 16px;
+    }
+    .secondaryText {
+        font-size: 14px;
+    }
+    .arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
+
