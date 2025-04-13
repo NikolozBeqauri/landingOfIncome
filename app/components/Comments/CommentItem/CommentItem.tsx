@@ -16,7 +16,7 @@ const CommentItem = ({ rating, comment, name, jobTitle }: Props) => {
                 alt="user image"
                 width={160}
                 height={160}
-                className={styles.image}
+                className={styles.userImage}
             />
             <div className={styles.textWrapper}>
                 <div className={styles.texts}>

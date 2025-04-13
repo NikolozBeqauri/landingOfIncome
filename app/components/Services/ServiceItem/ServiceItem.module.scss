@@ -4,6 +4,9 @@
     align-items: center;
     gap: 16px;
 }
+.rowReverse {
+    flex-direction: row-reverse;
+}
 .titles {
     max-width: 685px;
     width: 100%;
@@ -36,4 +39,67 @@
     display: flex;
     align-items: center;
     gap: 24px;
+}
+
+.joinUs {
+    max-width: 246px;
+    flex: 1 1 0; 
+    height: 56px;
+}
+
+.more {
+    max-width: 235px;
+    height: 56px;
+    flex: 1 1.1 0; 
+}
+
+@media (max-width: 1265px) {
+    .titles {
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .image {
+        width: 466px;
+        height: 436px;
+    }
+    .titles h3 {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 56px; 
+    }
+}
+
+@media (max-width: 1024px) {
+    .image {
+        width: 366px;
+        height: 336px;
+    }
+}
+
+@media (max-width: 768px) {
+    .titles{
+        gap: 16px;
+    }
+    .image {
+        width: 336px;
+        height: 336px;
+    }
+    .titles h3 {
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 32px; 
+    }
+    .titles p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        flex-direction: column;
+    }
 }

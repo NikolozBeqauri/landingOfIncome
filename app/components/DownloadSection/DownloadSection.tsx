@@ -19,7 +19,7 @@ const DownloadSection = () => {
                                 alt="google Play icon"
                                 width={144}
                                 height={42}
-                                className={styles.image}
+                                className={styles.googlePlay}
                             />
 
                             <Image
@@ -27,7 +27,7 @@ const DownloadSection = () => {
                                 alt="apple story icon"
                                 width={144}
                                 height={42}
-                                className={styles.image}
+                                className={styles.appleStory}
                             />
                         </div>
                     </div>

@@ -1,5 +1,4 @@
 import styles from "./page.module.scss";
-import Navigation from "./components/Navigation/Navigation";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 import Services from "./components/Services/Services";
 import Offer from "./components/Offer/Offer";
@@ -10,12 +9,15 @@ import Comments from "./components/Comments/Comments";
 import Advice from "./components/Advice/Advice";
 import FooterComponent from "./components/FooterComponent/FooterComponent";
 import ContactSection from "./components/ContactSection/ContactSection";
+import NavigationsWrapper from "./components/NavigationsWrapper/NavigationsWrapper";
 
 export default function Home() {
+  console.log('re');
+  
   return (
     <>
       <main className={styles.mainWrapper}>
-        <Navigation />
+        <NavigationsWrapper />
         <HeroBanner />
         <BankSlider />
         <Services />

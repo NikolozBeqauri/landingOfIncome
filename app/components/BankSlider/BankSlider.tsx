@@ -21,6 +21,7 @@ const BankSlider = () => {
                             alt={bank.name}
                             width={62}
                             height={62}
+                            className={styles.icon}
                         />
                         <p>{bank.name}</p>
                     </div>
@@ -34,6 +35,7 @@ const BankSlider = () => {
                             alt={bank.name}
                             width={62}
                             height={62}
+                            className={styles.icon}
                         />
                         <p>{bank.name}</p>
                     </div>
