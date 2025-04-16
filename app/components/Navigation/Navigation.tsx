@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from './Navigation.module.scss';
 import ReusableButton from '../ReusableButton/ReusableButton';
 

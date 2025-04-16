@@ -78,3 +78,34 @@
     padding: 16px 64px;
     border: none;
 }
+
+
+@media (max-width: 1300px) {
+    .contactForm {
+        padding: 48px 24px 18px 24px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .contactForm {
+        gap: 12px;
+        padding: 0px 24px 18px 24px;
+    }
+    .row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .contactForm > :nth-child(2) > :nth-child(2){
+        display: none;
+    }   
+}
+
+@media (max-width: 768px) {
+    .contactForm {
+        height: 474px;
+        min-height: auto; 
+    }
+    .textareaGroup {
+        margin-top: 0px;
+    }
+}
