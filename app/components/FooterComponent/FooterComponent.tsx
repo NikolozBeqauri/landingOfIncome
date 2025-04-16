@@ -88,7 +88,7 @@ const FooterComponent = () => {
                 </div>
                 <div className={styles.copyright}>
                     <p>Copyright © 2025 AVSE</p>
-                    <p>All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a></p>
+                    <p>All Rights Reserved | <a href="#" className={styles.linkStyle}>Terms and Conditions</a> | <a className={styles.linkStyle} href="#">Privacy Policy</a></p>
                 </div>
             </div>
         </footer>

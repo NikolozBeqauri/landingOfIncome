@@ -3,10 +3,18 @@
 import { useForm } from 'react-hook-form';
 import styles from './ContactForm.module.scss';
 
-const ContactForm = () => {
-    const { register, handleSubmit, reset } = useForm();
+interface ContactFormData {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    message: string;
+}
 
-    const onSubmit = (data: any) => {
+const ContactForm = () => {
+    const { register, handleSubmit, reset } = useForm<ContactFormData>();
+
+    const onSubmit = (data: ContactFormData) => {
         console.log(data);
         reset();
     };
