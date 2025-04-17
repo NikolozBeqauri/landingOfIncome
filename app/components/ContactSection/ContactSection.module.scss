@@ -34,6 +34,7 @@
 
 .leftContent {
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: 110px;
     border-radius: 12px;
@@ -84,7 +85,11 @@
     background-color: #FFF;
     padding: 6px;
 }
-
+.contactDots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 @media (max-width: 1024px) {
     .wrapper h2 {
         font-size: 32px;
@@ -99,6 +104,10 @@
     .leftContentTitle {
         font-size: 20px;
     }
+    .contactDots {
+        width: 150px;
+        height: 150px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -111,6 +120,10 @@
     }
     .contactSocialMedia {
         margin-top: 120px;
+    }
+    .contactDots {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -146,5 +159,9 @@
     .wrapper h2 {
         font-size: 24px;
         line-height: 30px;
+    }
+    .contactDots {
+        width: 70px;
+        height: 70px;
     }
 }

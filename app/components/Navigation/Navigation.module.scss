@@ -42,10 +42,9 @@
     line-height: 40px;
     white-space: nowrap;
     display: inline-block;
-    transition: 0.5s;
+    transition: 0.2s;
     &:hover {
         color: #0D92F2;
-        transform: scale(1.1);
     }
 }
 

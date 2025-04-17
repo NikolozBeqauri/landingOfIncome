@@ -1,4 +1,5 @@
 import styles from "./page.module.scss";
+import Head from 'next/head';
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 import Services from "./components/Services/Services";
 import Offer from "./components/Offer/Offer";
@@ -13,7 +14,7 @@ import NavigationsWrapper from "./components/NavigationsWrapper/NavigationsWrapp
 
 export default function Home() {
   console.log('re');
-  
+
   return (
     <>
       <main className={styles.mainWrapper}>
