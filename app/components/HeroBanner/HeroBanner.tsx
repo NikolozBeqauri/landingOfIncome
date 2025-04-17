@@ -12,7 +12,7 @@ const HeroBanner = () => {
                         შემოუერთდი ჩვენს აპლიკაციას, გადმოიწერე ის შენს ტელეფონში და მოიგვარე დეკლარაციასთან
                         დაკავშირებული ყველა პრობლემა.
                     </p>
-                    <div className={styles.buttons}>
+                    <div className={styles.buttonsWrapper}>
                         <div className={styles.joinUs}>
                             <ReusableButton title={'შემოგვიერთდი'} />
                         </div>
@@ -21,20 +21,29 @@ const HeroBanner = () => {
                         </div>
                     </div>
                 </div>
-                <Image
-                    src="/heroBanner.png"
-                    alt="hero banner"
-                    width={630}
-                    height={650}
-                    className={styles.heroImage}
-                />
-                <Image
-                    src="/smallHeroImage.png"
-                    alt="hero banner"
-                    width={456}
-                    height={478}
-                    className={styles.smallHeroImage}
-                />
+                <div className={styles.heroImages}>
+                    <Image
+                        src="/heroDesktop.png"
+                        alt="hero banner"
+                        width={650}
+                        height={650}
+                        className={styles.heroDesktop}
+                    />
+                    <Image
+                        src="/heroLaptop.png"
+                        alt="hero banner"
+                        width={326}
+                        height={448}
+                        className={styles.heroLaptop}
+                    />
+                    <Image
+                        src="/herophone.png"
+                        alt="hero banner"
+                        width={430}
+                        height={380}
+                        className={styles.heroPhone}
+                    />
+                </div>
             </div>
         </div>
     )

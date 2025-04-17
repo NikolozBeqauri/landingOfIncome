@@ -7,6 +7,7 @@
 }
 
 .heroWrapper {
+    position: relative;
     max-width: 1456px;
     width: 100%;
     display: flex;
@@ -16,7 +17,7 @@
 }
 
 .heroTitles {
-    max-width: 900px;
+    max-width: 850px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -26,7 +27,7 @@
 .heroTitles h1 {
     color: #000;
     font-family: var(--font-noto-sans-georgian);
-    font-size: 56px;
+    font-size: 62px;
     font-style: normal;
     font-weight: 800;
     line-height: 72px;
@@ -45,14 +46,10 @@
     margin: 24px 0px 40px 0px;
 }
 
-.buttons {
+.buttonsWrapper {
     display: flex;
     align-items: center;
     gap: 24px;
-}
-
-.heroImage {
-    align-self: flex-end;
 }
 
 .joinUs {
@@ -67,7 +64,19 @@
     flex: 2 1 0; 
 }
 
-.smallHeroImage {
+.heroDesktop {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.heroImages {
+    height: 100%;
+    display: flex;
+}
+.heroLaptop {
+    display: none;
+}
+.heroPhone {
     display: none;
 }
 
@@ -78,46 +87,39 @@
         font-weight: 800;
         line-height: 64px;
     }
-
-    .heroImage {
-        width: 600px;
-        height: 620px;
-    }
 }
 
 @media (max-width: 1330px) {
-    .heroWrapper {
-        height: 560px;
-    }
-
     .heroTitles h1 {
-        font-size: 46px;
-    }
-
-    .heroImage {
-        width: 500px;
-        height: 520px;
+        font-size: 52px;
     }
 }
 
 @media (max-width: 1200px) {
-    .heroImage {
-        display: none;
+    .heroWrapper {
+        height: 560px;
     }
-
-    .smallHeroImage {
-        display: flex;
-        align-self: flex-end;
+    .heroTitles h1 {
+        font-size: 48px;
+    }
+    .heroDesktop {
+        width: 500px;
+        height: 500px;
     }
 }
-
+@media (max-width: 1100px) {
+    .heroDesktop {
+        width: 470px;
+        height: 470px;
+    }
+}
 @media (max-width: 1024px) {
     .heroWrapper {
         gap: 16px;
     }
     .heroTitles h1 {
-        font-size: 38px;
-        line-height: 42px;
+        font-size: 26px;
+        line-height: 32px;
     }
 
     .heroTitles p {
@@ -126,34 +128,31 @@
         line-height: 24px;
         max-width: 460px;
     }
-}
-
-@media (max-width: 920px) {
-    .heroWrapper {
-        gap: 16px;
+    .heroDesktop {
+        display: none;
     }
-    .heroTitles h1 {
-        font-size: 26px;
-        line-height: 32px;
+    .heroLaptop {
+        display: flex;
+        width: 426px;
+        height: 448px;
+        align-self: center;
     }
 }
-
-@media (max-width: 768px) {
-    .smallHeroImage {
+@media (max-width: 825px){
+    .heroLaptop {
+        display: flex;
         width: 326px;
-        height: 420px;
-    }
-    .heroWrapper {
-        height: 500px;
+        height: 400px;
+        align-self: center;
     }
 }
-
 @media (max-width: 768px) {
     .heroWrapper {
         gap: 8px;
+        height: 500px;
     }
     .heroTitles h1 {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 32px;
     }
     .heroTitles p {
@@ -162,19 +161,25 @@
         line-height: 24px;
         max-width: 360px;
     }
+    .buttonsWrapper > div {
+        height: 54px;
+    }
 }
 
-@media (max-width: 616px){ 
+@media (max-width: 680px) {
+    .heroTitles h1 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 635px){ 
     .heroWrapper {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
         height: auto;
-        margin-top: 40px;
-    }
-    .smallHeroImage {
-        display: flex;
-        align-self: center;
+        margin-top: 10px;
     }
     .heroTitles {
         text-align: center; 
@@ -182,8 +187,21 @@
     .heroTitles p {
         max-width: 100%;
     }
+    .heroLaptop {
+        display: none;
+    }
+    .heroPhone {
+        display: flex;
+    }
 }
-@media (max-width: 375px) {
+@media (max-width: 512px) {
+    .heroPhone {
+        width: 350px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 400px) {
     .heroTitles p {
         display: none;
     }

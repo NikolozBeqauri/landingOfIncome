@@ -2,7 +2,7 @@
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
 }
 .rowReverse {
     flex-direction: row-reverse;
@@ -35,36 +35,12 @@
     border-radius: 48px;
     background: rgba(13, 146, 242, 0.10);
 }
-.buttons {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
 
-.joinUs {
-    max-width: 246px;
-    flex: 1 1 0; 
-    height: 56px;
-}
-
-.more {
-    max-width: 235px;
-    height: 56px;
-    flex: 1 1.1 0; 
-}
-
-@media (max-width: 1265px) {
+@media (max-width: 1266px) {
     .titles {
-        max-width: 500px;
+        max-width: 600px;
         width: 100%;
         text-align: center;
-    }
-}
-
-@media (max-width: 1200px) {
-    .image {
-        width: 466px;
-        height: 436px;
     }
     .titles h3 {
         font-size: 36px;
@@ -73,17 +49,38 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+    .image {
+        width: 466px;
+        height: 436px;
+    }
+}
+
+@media (max-width: 1124px) {
+    .titles {
+        max-width: 500px;
+    }
     .image {
         width: 366px;
         height: 336px;
+        border-radius: 12px;
+    }
+    .titles h3 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .titles h3 {
+        font-size: 22px;
+        line-height: 48px; 
+    }
+    .titles{
+        gap: 16px;
     }
 }
 
 @media (max-width: 768px) {
-    .titles{
-        gap: 16px;
-    }
     .image {
         width: 336px;
         height: 336px;
@@ -101,5 +98,18 @@
 @media (max-width: 700px) {
     .wrapper {
         flex-direction: column;
+    }
+    .image {
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 520px) {
+    .image {
+        width: 100%;
+        height: auto;
+    }
+    .titles p {
+        text-align: start;
     }
 }
