@@ -26,14 +26,6 @@ const ServiceItem = (props: Props) => {
                 <p>
                     {props.paragraph}
                 </p>
-                <div className={styles.buttons}>
-                    <div className={styles.joinUs}>
-                        <ReusableButton title={'შემოგვიერთდი'} />
-                    </div>
-                    <div className={styles.more}>
-                        <ReusableButton title={'გაიგე მეტი'} buttonColor='grayButton' />
-                    </div>
-                </div>
             </div>
         </div>
     )

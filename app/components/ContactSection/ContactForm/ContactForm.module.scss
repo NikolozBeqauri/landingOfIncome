@@ -109,3 +109,15 @@
         margin-top: 0px;
     }
 }
+
+@media (max-width: 660px) {
+    .submit {
+        margin-top: 4px;
+    }
+}
+
+@media (max-width: 450px) {
+    .submit {
+        width: 100%;
+    }
+}

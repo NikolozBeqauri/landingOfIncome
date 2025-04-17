@@ -26,11 +26,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 24px;
+    gap: 65px;
 }
 
 .image {
-    border-radius: 60px;
+    border-radius: 48px;
     max-width: 729px;
     width: 100%;
     height: auto;
@@ -38,7 +38,6 @@
     object-fit: cover;
 }
   
-
 .offersWrapper {
     display: flex;
     flex-direction: column;
@@ -52,7 +51,7 @@
     padding: 0px 0px 36px  0px;
 }
 
-.offersItem>p {
+.offersItem > p {
     color: #000;
     font-family: var(--font-noto-sans-georgian);
     font-size: 32px;
@@ -75,7 +74,7 @@
 .offersText p {
     color: #828593;
     font-family: var(--font-noto-sans-georgian);
-    font-size: 14px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px
@@ -87,6 +86,21 @@
 }
 @media (max-width: 1024px) {
     .wrapper h2 {
+        font-size: 36px;
+        line-height: 32px;
+    }
+    .offersText h3 {
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 32px;
+    }
+    .image {
+        border-radius: 12px;
+        height: 100%;
+    }
+}
+@media (max-width: 900px) {
+    .wrapper h2 {
         font-size: 32px;
         line-height: 32px;
     }
@@ -94,11 +108,19 @@
         font-size: 20px;
         font-weight: 800;
         line-height: 32px;
+        margin-bottom: 12px;
+    }
+    .content {
+        gap: 16px;
+    }
+    .offersItem {
+        border-bottom: 0px;
+        padding-bottom: 24px;
     }
 }
 
 @media (max-width: 750px) {
-    .offersItem>p {
+    .offersItem > p {
         display: none;
     }
 }
@@ -118,8 +140,5 @@
     .wrapper h2 {
         font-size: 24px;
         line-height: 30px;
-    }
-    .image {
-        max-width: 400px;
     }
 }
