@@ -21,6 +21,13 @@ const ContactSection = () => {
             <div className={styles.contentWrapper}>
                 <div className={styles.leftContent}>
                     <h3 className={styles.leftContentTitle}>საკონტაქტო ინფორმაცია</h3>
+                    <Image
+                        src={"/contactDots.png"}
+                        alt={"dots"}
+                        width={180}
+                        height={180}
+                        className={styles.contactDots}
+                    />
                     <div className={styles.contacts}>
                         {contacts.map((contact) => (
                             <div key={contact.name} className={styles.contactsItem}>
@@ -56,7 +63,7 @@ const ContactSection = () => {
                         ))}
                     </nav>
                 </div>
-                <ContactForm/>
+                <ContactForm />
             </div>
         </section>
     );
