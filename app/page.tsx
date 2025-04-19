@@ -1,5 +1,4 @@
 import styles from "./page.module.scss";
-import Head from 'next/head';
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 import Services from "./components/Services/Services";
 import Offer from "./components/Offer/Offer";
