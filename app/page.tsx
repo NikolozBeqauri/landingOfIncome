@@ -12,7 +12,7 @@ import ContactSection from "./components/ContactSection/ContactSection";
 import NavigationsWrapper from "./components/NavigationsWrapper/NavigationsWrapper";
 
 export default function Home() {
-  console.log('re');
+  console.log('rerender');
 
   return (
     <>

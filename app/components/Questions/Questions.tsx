@@ -1,19 +1,52 @@
-import QuestionItem from './QuestionItem/QuestionItem'
-import styles from './Questions.module.scss'
-
+'use client'
+import { useInView } from "react-intersection-observer";
+import QuestionItem from './QuestionItem/QuestionItem';
+import styles from './Questions.module.scss';
 
 const Questions = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.4,
+  });
+
+  const questions = [
+    {
+      mainText: 'შემიძლია მობილური აპლიკაციის ჩაწერა?',
+      secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      mainText: 'შემიძლია მობილური აპლიკაციის ჩაწერა?',
+      secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      mainText: 'შემიძლია მობილური აპლიკაციის ჩაწერა?',
+      secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+    {
+      mainText: 'შემიძლია მობილური აპლიკაციის ჩაწერა?',
+      secondaryText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    },
+  ];
+
   return (
-    <div id='questions' className={styles.wrapper}>
-      <h2>ხშირად დასმული კითხვები</h2>
+    <div id='questions' className={styles.wrapper} ref={ref}>
+      <h2 className={`${styles.title} ${inView ? styles.animateTitle : ''}`}>
+        ხშირად დასმული კითხვები
+      </h2>
+
       <div className={styles.questions}>
-        <QuestionItem mainText={'შემიძლია მობილური აპლიკაციის ჩაწერა?'} secondaryText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
-        <QuestionItem mainText={'შემიძლია მობილური აპლიკაციის ჩაწერა?'} secondaryText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
-        <QuestionItem mainText={'შემიძლია მობილური აპლიკაციის ჩაწერა?'} secondaryText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
-        <QuestionItem mainText={'შემიძლია მობილური აპლიკაციის ჩაწერა?'} secondaryText={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}/>
+        {questions.map((q, index) => (
+          <div
+            key={index}
+            className={`${styles.questionItem} ${inView ? styles.animateQuestion : ''} ${inView ? (index % 2 === 0 ? styles.fromRight : styles.fromLeft) : ''}`}
+            style={{ animationDelay: `${index * 0.3}s`, animationFillMode: 'forwards' }}
+          >
+            <QuestionItem mainText={q.mainText} secondaryText={q.secondaryText} />
+          </div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Questions
+export default Questions;

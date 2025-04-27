@@ -1,3 +1,36 @@
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .outSpace {
     width: 100%;
 }
@@ -65,6 +98,9 @@
     margin-top: 30px;
     align-items: center;
 }
+.downloadIcons > img {
+    cursor: pointer;
+}
 .image {
     max-width: 786px;
     width: 100%;
@@ -74,6 +110,41 @@
     flex: 1 1 1;
     align-self: flex-end;
 }
+
+.opacityHidden {
+    opacity: 0;
+    transform: translateY(100px); 
+}
+
+.animateH2 {
+    animation: slideUp 1.2s ease-out forwards;
+}
+
+.animateImage {
+    animation: slideFromRight 1.2s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.animateH3 {
+    animation: slideFromLeft 1.2s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.animateP {
+    animation: slideFromLeft 1.2s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
+.animateApple {
+    animation: slideUp 1.2s ease-out forwards;
+    animation-delay: 1.6s;
+}
+
+.animateGoogle {
+    animation: slideUp 1.2s ease-out forwards;
+    animation-delay: 2s;
+}
+
 @media (max-width: 1200px) {
     .wrapper {
         padding: 56px 16px 0px 16px;
@@ -102,7 +173,7 @@
         font-size: 20px;
     }
     .outSpace {
-        padding: 0px 40px;
+        padding: 0px 16px;
     }
 }
 
@@ -136,7 +207,7 @@
     }
     .wrapper {
         gap: 16px;
-        padding: 16px 16px 0px 16px;
+        padding: 24px 16px 0px 16px;
     }
     .contentItem {
         align-items: start;

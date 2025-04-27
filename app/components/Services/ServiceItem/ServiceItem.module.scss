@@ -1,12 +1,38 @@
+@keyframes slideFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .wrapper {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
 }
+
 .rowReverse {
     flex-direction: row-reverse;
 }
+
 .titles {
     max-width: 685px;
     width: 100%;
@@ -14,26 +40,48 @@
     flex-direction: column;
     gap: 24px;
 }
+
 .titles h3 {
     color: #000;
     font-family: var(--font-noto-sans-georgian);
     font-size: 40px;
     font-style: normal;
     font-weight: 800;
-    line-height: 68px; 
+    line-height: 68px;
     text-transform: uppercase;
+    opacity: 0;
+    transform: translateX(100px);
 }
+
 .titles p {
-    color:#464C53;
+    color: #464C53;
     font-family: var(--font-noto-sans-georgian);
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: 24px;
+    opacity: 0;
+    transform: translateX(100px);
 }
+
+.titleAnimate {
+    animation: slideFromRight 1s ease-out forwards;
+}
+
+.paragraphAnimate {
+    animation: slideFromRight 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
 .image {
     border-radius: 48px;
     background: rgba(13, 146, 242, 0.10);
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.imageAnimate {
+    animation: slideFromLeft 1s ease-out forwards;
 }
 
 @media (max-width: 1266px) {
@@ -42,10 +90,11 @@
         width: 100%;
         text-align: center;
     }
+
     .titles h3 {
         font-size: 36px;
         font-weight: 800;
-        line-height: 56px; 
+        line-height: 56px;
     }
 }
 
@@ -60,11 +109,13 @@
     .titles {
         max-width: 500px;
     }
+
     .image {
         width: 366px;
         height: 336px;
         border-radius: 12px;
     }
+
     .titles h3 {
         font-size: 28px;
     }
@@ -73,9 +124,10 @@
 @media (max-width: 900px) {
     .titles h3 {
         font-size: 22px;
-        line-height: 48px; 
+        line-height: 48px;
     }
-    .titles{
+
+    .titles {
         gap: 16px;
     }
 }
@@ -85,11 +137,13 @@
         width: 336px;
         height: 336px;
     }
+
     .titles h3 {
         font-size: 18px;
         font-weight: 800;
-        line-height: 32px; 
+        line-height: 32px;
     }
+
     .titles p {
         font-size: 14px;
     }
@@ -99,6 +153,7 @@
     .wrapper {
         flex-direction: column;
     }
+
     .image {
         border-radius: 16px;
     }
@@ -109,6 +164,7 @@
         width: 100%;
         height: auto;
     }
+
     .titles p {
         text-align: start;
     }

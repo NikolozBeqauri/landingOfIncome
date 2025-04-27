@@ -1,19 +1,42 @@
-import styles from './Services.module.scss'
+'use client';
+
+import styles from './Services.module.scss';
 import ServiceItem from './ServiceItem/ServiceItem';
+import { useInView } from 'react-intersection-observer';
 
 const Services = () => {
-    return (
-        <section id='services' className={styles.serviceWrapper}>
-            <div className={styles.serviceTitles}>
-                <h2>ჩვენი სერვისერბი</h2>
-                <p>გაიგე თუ რას გთავაზობთ ჩვენ</p>
-            </div>
+  const { ref, inView } = useInView({
+    triggerOnce: true, 
+    threshold: 0.1,    
+  });
 
-            <ServiceItem title={'თვალი ადევნე შემოსავლებს'} paragraph={'შემოუერთდი ჩვენს აპლიკაციას, გადმოიწერე ის შენს ტელეფონში და მოიგვარე დეკლარაციასთან დაკავშირებული ყველა პრობლემა.'} imageName={'serviceIncome'}/>
-            <ServiceItem title={'დაამატე ბიზნეს ანგარიშები'} rowReverse paragraph={'შემოუერთდი ჩვენს აპლიკაციას, გადმოიწერე ის შენს ტელეფონში და მოიგვარე დეკლარაციასთან დაკავშირებული ყველა პრობლემა.'} imageName={'serviceAccounts'}/>
-            <ServiceItem title={'გადაიხადე დეკლარაცია'} paragraph={'შემოუერთდი ჩვენს აპლიკაციას, გადმოიწერე ის შენს ტელეფონში და მოიგვარე დეკლარაციასთან დაკავშირებული ყველა პრობლემა.'} imageName={'serviceDeclaration'}/>
-        </section>
-    )
-}
+  return (
+    <section id="services" ref={ref} className={styles.serviceWrapper}>
+      <div className={styles.serviceTitles}>
+        <h2 className={inView ? styles.animate : ''}>ჩვენი სერვისები</h2>
+        <p className={inView ? styles.animateDelay : ''}>
+          გაიგე თუ რას გთავაზობთ ჩვენ
+        </p>
+      </div>
 
-export default Services
+      <ServiceItem
+        title="თვალი ადევნე შემოსავლებს"
+        paragraph="შემოუერთდი ჩვენს აპლიკაციას, გადმოიწერე ის შენს ტელეფონში და მოიგვარე დეკლარაციასთან დაკავშირებული ყველა პრობლემა."
+        imageName="serviceIncome"
+      />
+      <ServiceItem
+        title="დაამატე ბიზნეს ანგარიშები"
+        paragraph="შემოუერთდი ჩვენს აპლიკაციას, გადმოიწერე ის შენს ტელეფონში და მოიგვარე დეკლარაციასთან დაკავშირებული ყველა პრობლემა."
+        imageName="serviceAccounts"
+        rowReverse
+      />
+      <ServiceItem
+        title="გადაიხადე დეკლარაცია"
+        paragraph="შემოუერთდი ჩვენს აპლიკაციას, გადმოიწერე ის შენს ტელეფონში და მოიგვარე დეკლარაციასთან დაკავშირებული ყველა პრობლემა."
+        imageName="serviceDeclaration"
+      />
+    </section>
+  );
+};
+
+export default Services;

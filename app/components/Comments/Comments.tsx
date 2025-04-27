@@ -1,5 +1,7 @@
-import CommentItem from './CommentItem/CommentItem'
-import styles from './Comments.module.scss'
+'use client'
+import CommentItem from './CommentItem/CommentItem';
+import styles from './Comments.module.scss';
+import { useInView } from 'react-intersection-observer';
 
 const commentsData = [
   {
@@ -35,10 +37,15 @@ const commentsData = [
 ];
 
 const Comments = () => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
-    <section id='comments' className={styles.wrapper}>
-      <h2>ჩვენი მომხმარებლები</h2>
-      <div className={styles.commentsWrapper}>
+    <section id="comments" className={styles.wrapper} ref={ref}>
+      <h2 className={`${styles.opacityHidden} ${inView ? styles.animateUp : ''}`}>
+        ჩვენი მომხმარებლები
+      </h2>
+
+      <div className={`${styles.commentsWrapper} ${styles.opacityHidden} ${inView ? styles.commentsAnimateUp : ''}`}>
         <div className={styles.comments}>
           {commentsData.concat(commentsData).map((comment, index) => (
             <CommentItem
@@ -63,7 +70,7 @@ const Comments = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Comments;
