@@ -1,27 +1,38 @@
-.wrapper {
+@keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .wrapper {
     max-width: 1456px;
     width: 100%;
-    padding: 0px 16px;
+    padding: 0 16px;
     display: flex;
     flex-direction: column;
     gap: 90px;
-}
-
-.header {
+  }
+  
+  .header {
     display: flex;
     justify-content: center;
-}
-
-.headerTexts {
+  }
+  
+  .headerTexts {
     position: relative;
     max-width: 565px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 24px;
-}
-
-.headerTexts h2 {
+  }
+  
+  .headerTexts h2 {
     color: #000;
     text-align: center;
     font-family: var(--font-noto-sans-georgian);
@@ -30,57 +41,74 @@
     font-weight: 800;
     line-height: 80px;
     text-transform: uppercase;
-}
-
-.headerTexts p {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .headerTexts p {
     color: #464C53;
     text-align: center;
     font-family: var(--font-noto-sans-georgian);
-    font-size: 16;
+    font-size: 16px;
     font-weight: 500;
-}
-
-.plane {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .animateIn {
+    animation: slideUp 0.8s ease forwards;
+  }
+  
+  .plane {
     position: absolute;
     left: calc(100% + 20px);
     transform: rotate(-10deg);
-}
-
-.advice {
+  }
+  
+  .advice {
     max-width: 1440px;
     width: 100%;
     height: auto;
-}
-@media (max-width: 1440px) {
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1440px) {
     .plane {
-        display: none;
+      display: none;
     }
-}
-@media (max-width: 1024px) {
-    .wrapper h2 {
-        font-size: 32px;
-        line-height: 32px;
-    }
+  }
+  
+  @media (max-width: 1024px) {
     .wrapper {
-        gap: 40px;
+      gap: 40px;
     }
-    .headerTexts p {
-        font-size: 14;
-    }
+  
     .headerTexts {
-        gap: 16px;
+      gap: 16px;
     }
-}
-
-@media (max-width: 600px) {
-    .wrapper {
-        gap: 24px;
+  
+    .headerTexts h2 {
+      font-size: 32px;
+      line-height: 32px;
     }
-    .wrapper h2 {
-        font-size: 24px;
-        line-height: 30px;
-    }
+  
     .headerTexts p {
-        font-size: 12;
+      font-size: 14px;
     }
-}
+  }
+  
+  @media (max-width: 600px) {
+    .wrapper {
+      gap: 24px;
+    }
+  
+    .headerTexts h2 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  
+    .headerTexts p {
+      font-size: 12px;
+    }
+  }
+  

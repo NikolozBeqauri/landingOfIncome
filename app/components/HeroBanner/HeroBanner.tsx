@@ -31,14 +31,14 @@ const HeroBanner = () => {
                     />
                     <Image
                         src="/heroLaptop.png"
-                        alt="hero banner"
+                        alt="hero laptop banner"
                         width={326}
                         height={448}
                         className={styles.heroLaptop}
                     />
                     <Image
-                        src="/herophone.png"
-                        alt="hero banner"
+                        src="/heroPhone.png"
+                        alt="hero mobile banner"
                         width={430}
                         height={380}
                         className={styles.heroPhone}

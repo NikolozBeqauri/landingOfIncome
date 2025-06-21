@@ -1,3 +1,16 @@
+@keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+
 .background {
     position: fixed;
     left: 0;
@@ -7,6 +20,7 @@
     display: flex;
     justify-content: center;
     z-index: 5;
+    animation: slideDown 0.7s ease-out forwards;
 }
 
 .wrapper {
