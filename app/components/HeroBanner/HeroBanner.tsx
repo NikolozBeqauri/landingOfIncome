@@ -1,11 +1,12 @@
+'use client';
+
 import styles from './HeroBanner.module.scss';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import ReusableButton from '../ReusableButton/ReusableButton';
 
-const HeroBanner = () => {
-    const { basePath } = useRouter();
+const basePath = process.env.NODE_ENV === 'production' ? '/landingOfIncome' : '';
 
+const HeroBanner = () => {
     return (
         <div className={styles.background}>
             <div className={styles.heroWrapper}>
