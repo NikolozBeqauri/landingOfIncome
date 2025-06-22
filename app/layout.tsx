@@ -30,6 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {process.env.NODE_ENV === 'production' && (
+          <base href="/landingOfIncome/" />
+        )}
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${notoSansGeorgian.variable}`}>
         {children}
       </body>
