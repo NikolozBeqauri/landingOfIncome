@@ -1,10 +1,6 @@
-'use client';
-
 import styles from './HeroBanner.module.scss';
 import Image from 'next/image';
 import ReusableButton from '../ReusableButton/ReusableButton';
-
-const basePath = process.env.NODE_ENV === 'production' ? '/landingOfIncome' : '';
 
 const HeroBanner = () => {
     return (
@@ -27,21 +23,21 @@ const HeroBanner = () => {
                 </div>
                 <div className={styles.heroImages}>
                     <Image
-                        src={`${basePath}/heroDesktop.png`}
+                        src={`/heroDesktop.png`}
                         alt="hero banner"
                         width={650}
                         height={650}
                         className={styles.heroDesktop}
                     />
                     <Image
-                        src={`${basePath}/heroLaptop.png`}
+                        src={`/heroLaptop.png`}
                         alt="hero laptop banner"
                         width={326}
                         height={448}
                         className={styles.heroLaptop}
                     />
                     <Image
-                        src={`${basePath}/heroPhone.png`}
+                        src={`/heroPhone.png`}
                         alt="hero mobile banner"
                         width={430}
                         height={380}
