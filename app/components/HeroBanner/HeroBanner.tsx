@@ -12,14 +12,6 @@ const HeroBanner = () => {
                         შემოუერთდი ჩვენს აპლიკაციას, გადმოიწერე ის შენს ტელეფონში და მოიგვარე დეკლარაციასთან
                         დაკავშირებული ყველა პრობლემა.
                     </p>
-                    <div className={styles.buttonsWrapper}>
-                        <div className={styles.joinUs}>
-                            <ReusableButton title="შემოგვიერთდი" />
-                        </div>
-                        <div className={styles.more}>
-                            <ReusableButton title="გაიგე მეტი" buttonColor="grayButton" />
-                        </div>
-                    </div>
                 </div>
                 <div className={styles.heroImages}>
                     <Image
