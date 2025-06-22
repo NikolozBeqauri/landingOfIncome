@@ -6,8 +6,8 @@ const SocialLinks = () => {
       { name: "Facebook", url: "https://facebook.com", img: "/facebook.svg" },
       { name: "Twitter", url: "https://twitter.com", img: "/twitter.svg" },
       { name: "Instagram", url: "https://instagram.com", img: "/instagram.svg" },
-      { name: "LinkedIn", url: "https://linkedin.com", img: "/linkedin.svg" },
-      { name: "YouTube", url: "https://youtube.com", img: "/youtube.svg" },
+      { name: "LinkedIn", url: "https://linkedin.com", img: "/linkedIn.svg" },
+      { name: "YouTube", url: "https://youtube.com", img: "/youTube.svg" },
     ];
   
     return (
