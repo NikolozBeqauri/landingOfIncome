@@ -23,21 +23,21 @@ const HeroBanner = () => {
                 </div>
                 <div className={styles.heroImages}>
                     <Image
-                        src="/heroDesktop.png"
+                        src="/landingOfIncome/heroDesktop.png"
                         alt="hero banner"
                         width={650}
                         height={650}
                         className={styles.heroDesktop}
                     />
                     <Image
-                        src="/heroLaptop.png"
+                        src="/landingOfIncome/heroLaptop.png"
                         alt="hero laptop banner"
                         width={326}
                         height={448}
                         className={styles.heroLaptop}
                     />
                     <Image
-                        src="/heroPhone.png"
+                        src="/landingOfIncome/heroPhone.png"
                         alt="hero mobile banner"
                         width={430}
                         height={380}
